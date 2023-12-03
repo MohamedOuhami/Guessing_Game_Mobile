@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
-    val words = listOf("Android", "Activity", "Fragment")
+    val words = listOf("Android","Omar","Ayoub","ENSAJ","Anime","ElJadida","FST")
     val secretWord = words.random().uppercase()
 
     private val _secretWordDisplay = MutableLiveData<String>()
@@ -61,4 +61,9 @@ class GameViewModel : ViewModel() {
         message += " The word was $secretWord."
         return message
     }
+
+    fun finishGame(){
+        _gameOver.value = true
+    }
+
 }
